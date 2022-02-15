@@ -45,32 +45,32 @@ function App() {
             <img className="logos" src='https://cdn-icons-png.flaticon.com/512/25/25231.png' alt='Github' />
           </a>
         </div>
-        <div>
-          {typeof data.main === "undefined" ? (
-            <div className="info">
-              <p className="infoTitle">Bienvenidos a mi app del clima!</p>
-            </div>
-          ) : (
-            <div className="data">
-              <p className="name">{data?.name}</p>
-              <p className="desc">{data?.weather[0].description.charAt(0).toUpperCase() + data?.weather[0].description.slice(1)}</p>
-              <img className="icon" alt='icon' src={`http://openweathermap.org/img/wn/${data?.weather[0].icon}.png`}></img>
-              <p className="temp">{Math.round(data?.main?.temp)} °C</p>
-              <div className="minMax">
-                <div className="detail">
-                  <span className="span">Min</span>
-                  <p className="min">{Math.round(data?.main?.temp_min)}°</p>
-                </div>
-                <div className="detail">
-                  <span className="span">Max</span>
-                  <p className="max">{Math.round(data?.main?.temp_max)}°</p>
-                </div>
+        {/* <div> */}
+        {typeof data.main === "undefined" ? (
+          <div className="info">
+            <p className="infoTitle">Bienvenidos a mi app del clima!</p>
+          </div>
+        ) : (
+          <div className="data">
+            <p className="name">{data?.name}</p>
+            <p className="desc">{data?.weather[0].description.charAt(0).toUpperCase() + data?.weather[0].description.slice(1)}</p>
+            <img className="icon" alt='icon' src={`http://openweathermap.org/img/wn/${data?.weather[0].icon}.png`}></img>
+            <p className="temp">{Math.round(data?.main?.temp)} °C</p>
+            <div className="minMax">
+              <div className="detail">
+                <span className="span">Min</span>
+                <p className="min">{Math.round(data?.main?.temp_min)}°</p>
+              </div>
+              <div className="detail">
+                <span className="span">Max</span>
+                <p className="max">{Math.round(data?.main?.temp_max)}°</p>
               </div>
             </div>
-          )
-          }
-        </div >
+          </div>
+        )
+        }
       </div >
+      {/* </div > */}
       {/* <div className="logos-container">
         <a className="logos-div" href='https://github.com/Goncervan' target='_blank'>
           <img className='logos' src='https://cdn-icons-png.flaticon.com/512/25/25231.png' alt='Github' />

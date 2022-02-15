@@ -68,9 +68,11 @@
 
 .info{
     width: 70%;
-    height: 50px;
+    height: auto;
     padding: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 30px;
     border-bottom: 1px solid #b3b3b3;
     text-align: center;
