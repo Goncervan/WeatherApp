@@ -33,10 +33,22 @@ function App() {
           />
           <button className="btn" onClick={(e) => handleSearch(e)}>Buscar</button>
         </div>
+        <div className="info">
+          <h3 className="infoTitle">¡Mis Redes!</h3>
+        </div>
+        <div className="container-btn">
+          <a className="btn-redes" href="https://www.linkedin.com/in/gonzalo-cervan/" target="_blank">
+            <img className="logos" src='https://cdn-icons-png.flaticon.com/512/174/174857.png' alt='LinkedIn' />
+          </a>
+
+          <a className="btn-redes" href='https://github.com/Goncervan' target='_blank'>
+            <img className="logos" src='https://cdn-icons-png.flaticon.com/512/25/25231.png' alt='Github' />
+          </a>
+        </div>
         <div>
           {typeof data.main === "undefined" ? (
-            <div>
-              <p>Bienvenidos a mi app del clima!</p>
+            <div className="info">
+              <p className="infoTitle">Bienvenidos a mi app del clima!</p>
             </div>
           ) : (
             <div className="data">
@@ -59,6 +71,16 @@ function App() {
           }
         </div >
       </div >
+      {/* <div className="logos-container">
+        <a className="logos-div" href='https://github.com/Goncervan' target='_blank'>
+          <img className='logos' src='https://cdn-icons-png.flaticon.com/512/25/25231.png' alt='Github' />
+          <p className='logos-text'>Goncervan</p>
+        </a>
+        <a className="logos-div" href='https://www.linkedin.com/in/gonzalo-cervan/' target='_blank'>
+          <img className='logos' src='https://cdn-icons-png.flaticon.com/512/174/174857.png' alt='LinkedIn' />
+          <p className='logos-text'>Gonzalo Cervan</p>
+        </a>
+      </div> */}
     </div>
   );
 }
